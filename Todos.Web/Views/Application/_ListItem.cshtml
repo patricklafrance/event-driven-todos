@@ -1,0 +1,26 @@
+﻿<script type="text/html" id="list-item-component">
+    <li data-bind="css: { 'is-completed': isCompleted }">
+        <!-- ko template: { name: getTemplateName() } -->
+        <!-- /ko -->
+    </li>
+</script>
+
+<script type="text/html" id="editable-todo-list-item">
+    <input data-bind="value: description" />
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" data-bind="click: save">save</a>
+    &nbsp;&nbsp;
+    <a href="#" data-bind="click: cancelEdition">cancel</a>
+</script>
+
+<script type="text/html" id="read-only-todo-list-item">
+    <span data-bind="text: description"></span>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" data-bind="click: edit">edit</a>
+    &nbsp;&nbsp;
+    <a href="#" data-bind="click: remove">delete</a>
+    <!-- ko if: isCompleted() === false -->
+        &nbsp;&nbsp;
+        <a href="#" data-bind="click: markCompleted">scratch</a>
+    <!-- /ko -->
+</script>

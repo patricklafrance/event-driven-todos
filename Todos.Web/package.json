@@ -1,0 +1,38 @@
+{
+  "name": "Todos",
+  "version": "1.0.0",
+  "main": "./Content/Js/App/application.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "license": "MIT",
+  "browser": {
+	"jquery": "./Content/Js/Externals/jquery/dist/jquery.js",
+	"knockout": "./Content/Js/Externals/knockout/dist/knockout.debug.js",
+    "underscore": "./Content/Js/Externals/underscore/underscore.js",
+	"q":  "./Content/Js/Externals/q/q.js",
+	"mediator-js": "./Content/Js/Externals/mediator/mediator.js",
+    "utils": "./Content/Js/App/Core/utils.js",
+    "ajax": "./Content/Js/App/Core/ajax.js",
+	"mediator": "./Content/Js/App/Core/mediator.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "jquery": "jQuery",
+    "knockout": "ko"
+  },
+  "browserify": {
+    "transform": ["browserify-shim"]
+  },
+  "devDependencies": {
+    "browserify": "^6.1.0",
+    "browserify-shim": "^3.8.0",
+    "del": "^0.1.3",
+    "gulp-concat": "^2.4.1",
+    "gulp-jshint": "^1.8.5",
+    "jshint-stylish": "^1.0.0",
+    "remapify": "^1.3.0",
+    "require-dir": "^0.1.0",
+    "vinyl-source-stream": "^1.0.0"
+  }
+}

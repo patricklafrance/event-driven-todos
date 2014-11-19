@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Event driven todos</title>
+    
+    <link href="/Content/Css/style.css" rel="stylesheet" />
+</head>
+    <body>
+        <add-todo></add-todo>
+        <br />
+        <list-todos></list-todos>
+        <br />
+        <todos-filters></todos-filters>
+        <br />
+        <todos-counter></todos-counter>
+        
+        @{ Html.RenderPartial("_List"); }
+        @{ Html.RenderPartial("_ListItem"); }
+        @{ Html.RenderPartial("_Add"); }
+        @{ Html.RenderPartial("_Counter"); }
+        @{ Html.RenderPartial("_Filters"); }
+
+        <script src="/Content/Js/scripts.js"></script>
+    </body>
+</html>
