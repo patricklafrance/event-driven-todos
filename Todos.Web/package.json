@@ -14,7 +14,8 @@
 	"mediator-js": "./Content/Js/Externals/mediator/mediator.js",
     "utils": "./Content/Js/App/Core/utils.js",
     "ajax": "./Content/Js/App/Core/ajax.js",
-	"mediator": "./Content/Js/App/Core/mediator.js"
+	"mediator": "./Content/Js/App/Core/mediator.js",
+	"registerHandler": "./Content/Js/App/Core/register.handler.js"
   },
   "browserify-shim": {
     "jquery": "$",

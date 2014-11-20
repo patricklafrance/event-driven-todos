@@ -90,12 +90,14 @@
     <Content Include="Content\Js\App\component.list-item.js" />
     <Content Include="Content\Js\App\Core\ajax.js" />
     <Content Include="Content\Js\App\Core\mediator.js" />
+    <Content Include="Content\Js\App\Core\register.handler.js" />
     <Content Include="Content\Js\App\Core\utils.js" />
     <Content Include="Content\Js\App\application.js" />
     <Content Include="Content\Js\App\handler.complete-todo.js" />
     <Content Include="Content\Js\App\handler.fetch-todos.js" />
     <Content Include="Content\Js\App\handler.add-todo.js" />
     <Content Include="Content\Js\App\handler.delete-todo.js" />
+    <Content Include="Content\Js\App\handler.update-todo.js" />
     <Content Include="Content\Js\Externals\jquery\dist\jquery.js" />
     <Content Include="Content\Js\Externals\jquery\dist\jquery.min.js" />
     <Content Include="Content\Js\Externals\knockout\dist\knockout.debug.js" />

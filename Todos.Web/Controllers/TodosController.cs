@@ -22,8 +22,18 @@ namespace Todos.Web.Controllers
             };
         }
 
-        public ActionResult GetAll()
+        public ActionResult GetAll(string filter)
         {
+            if (filter.Equals("ACTIVE", StringComparison.OrdinalIgnoreCase))
+            {
+                return this.Json(new { Todos = registry.Where(x => !x.Value.IsCompleted).Select(x => x.Value) }, JsonRequestBehavior.AllowGet);
+            }
+
+            if (filter.Equals("COMPLETED", StringComparison.OrdinalIgnoreCase))
+            {
+                return this.Json(new { Todos = registry.Where(x => x.Value.IsCompleted).Select(x => x.Value) }, JsonRequestBehavior.AllowGet);
+            }
+
             return this.Json(new { Todos = registry.Select(x => x.Value) }, JsonRequestBehavior.AllowGet);
         }
 
@@ -32,9 +42,9 @@ namespace Todos.Web.Controllers
             registry.Add(value.Id, value);
         }
 
-        public void Delete(Todo value)
+        public void Delete(Guid id)
         {
-            registry.Remove(value.Id);
+            registry.Remove(id);
         }
 
         public void Update(Todo value)
@@ -42,9 +52,9 @@ namespace Todos.Web.Controllers
             registry[value.Id] = value;
         }
 
-        public void Complete(Todo value)
+        public void Complete(Guid id)
         {
-            registry[value.Id].IsCompleted = true;
+            registry[id].IsCompleted = true;
         }
 
         public ActionResult NextId()

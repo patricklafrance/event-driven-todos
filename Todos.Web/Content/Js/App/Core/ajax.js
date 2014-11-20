@@ -26,7 +26,6 @@ var ajax = {
 
     _getOptions: function(options) {
         var callOptions = _.isNull(options) ? {} : _.extend({}, options);
-        callOptions.contentType = utils.isNullOrEmpty(callOptions.contentType) ? "application/json" : callOptions.contentType;
         callOptions.cache = _.isUndefined(callOptions.cache) ? false : callOptions.cache;
             
         return callOptions;

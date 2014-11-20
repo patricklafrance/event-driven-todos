@@ -1,5 +1,6 @@
 ﻿"use strict";
 
+var ko = require("knockout");
 var mediator = require("mediator");
 
 var ViewModel = function(params) {
@@ -11,6 +12,12 @@ var ViewModel = function(params) {
 
     this.save = function() {
         that.isInEdition(false);
+
+        mediator.publish("update-todo", {
+            Id: params.todo.Id,
+            Description: that.description.peek(),
+            IsCompleted:  that.isCompleted.peek()
+        });
     };
 
     this.cancelEdition = function() {

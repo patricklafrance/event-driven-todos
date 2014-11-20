@@ -10,6 +10,7 @@ ko.components.register("todos-filters", require("./component.filters.js"));
 
 require("./handler.fetch-todos.js");
 require("./handler.add-todo.js");
+require("./handler.update-todo.js");
 require("./handler.delete-todo.js");
 require("./handler.complete-todo.js");
 

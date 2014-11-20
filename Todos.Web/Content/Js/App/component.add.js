@@ -1,5 +1,6 @@
 ﻿"use strict";
 
+var ko = require("knockout");
 var mediator = require("mediator");
 
 var ViewModel = function() {
